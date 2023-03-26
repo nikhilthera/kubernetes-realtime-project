@@ -7,9 +7,10 @@ pipeline{
             }
         }
         stage('docker image build'){
-            sshagent(['local machine']) {
+           steps{ sshagent(['local machine']) {
     sh 'ssh -o StrictHostKeyChecking=no -l nikhil thera@127.0.0.1'
     sh 'ssh -o StrictHostKeyChecking=no -l nikhil thera@127.0.0.1'
+                }
             }
         }
     }
