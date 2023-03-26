@@ -1,8 +1,10 @@
 pipeline{
     agent any
     stages{
-        stage('git scm checkout'){
+        stage{
+            steps('git scm checkout'){
             git 'https://github.com/nikhilthera/kubernetes-realtime-project.git'
+            }
         }
     }
 }
